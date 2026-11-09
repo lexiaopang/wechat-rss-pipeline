@@ -47,6 +47,26 @@ class AggregationTests(unittest.TestCase):
         from aggregate import canonical
         self.assertEqual(canonical('https://mp.weixin.qq.com/s?__biz=abc&mid=123&idx=1&sn=foo&scene=2'), canonical('https://mp.weixin.qq.com/s?mid=123&__biz=abc&idx=1&sn=bar'))
 
+    def test_expired_article_not_reintroduced(self):
+        state, _ = merge({}, [S], lambda s: feed(), NOW)
+        expired, _ = merge(state, [], now=NOW + 15 * 86400)
+        self.assertEqual(len(expired['articles']), 0)
+        again, _ = merge(expired, [S], lambda s: feed(), NOW + 16 * 86400)
+        self.assertEqual(len(again['articles']), 0)
+
+    def test_fallback_only_after_primary_failure(self):
+        from unittest.mock import patch
+        from aggregate import fetch
+        source = dict(S, fallback_url='https://backup.example/feed')
+        with patch('aggregate.fetch_url', return_value=feed()) as loader:
+            fetch(source)
+            self.assertEqual(loader.call_count, 1)
+        with patch('aggregate.fetch_url', side_effect=[TimeoutError('primary'), TimeoutError('primary'), feed()]) as loader:
+            data, used, error = fetch(source)
+            self.assertEqual(used['url'], source['fallback_url'])
+            self.assertIn('primary', error)
+            self.assertEqual(loader.call_count, 3)
+
     def test_malformed_source_isolated(self):
         other = dict(S, id='bad')
         state, report = merge({}, [S, other], lambda s: b'broken' if s['id']=='bad' else feed(), NOW)

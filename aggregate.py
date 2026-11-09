@@ -129,6 +129,7 @@ def fetch(source):
 def merge(state, sources, loader=fetch, now=None, retention_days=14):
     now = now if now is not None else dt.datetime.now(UTC).timestamp()
     records = dict(state.get('articles', {}))
+    seen = set(state.get('seen', [])) | set(records)
     report = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
         jobs = {executor.submit(loader, s): s for s in sources if s.get('enabled', True)}
@@ -145,6 +146,9 @@ def merge(state, sources, loader=fetch, now=None, retention_days=14):
                     raise ValueError('No usable articles in source')
                 for entry in entries:
                     previous = records.get(entry['guid'])
+                    if previous is None and entry['guid'] in seen:
+                        continue
+                    seen.add(entry['guid'])
                     if previous:
                         entry['first_seen'] = previous['first_seen']
                         entry['link'] = previous['link']
@@ -157,7 +161,7 @@ def merge(state, sources, loader=fetch, now=None, retention_days=14):
     # Keep newly discovered older articles too: a delayed run must not discard its backlog.
     cutoff = now - retention_days * 86400
     records = {k: v for k, v in records.items() if max(v['published'], v['first_seen']) >= cutoff}
-    return {'version': 1, 'articles': records}, {'sources': sorted(report, key=lambda r: r['source']), 'articles': len(records), 'generated_at': now}
+    return {'version': 1, 'articles': records, 'seen': sorted(seen)}, {'sources': sorted(report, key=lambda r: r['source']), 'articles': len(records), 'generated_at': now}
 
 
 def render(state):
