@@ -4,6 +4,7 @@ import concurrent.futures
 import datetime as dt
 import email.utils
 import hashlib
+from html.parser import HTMLParser
 import json
 import os
 from pathlib import Path
@@ -15,6 +16,31 @@ import xml.etree.ElementTree as ET
 UTC = dt.timezone.utc
 CONTENT = 'http://purl.org/rss/1.0/modules/content/'
 ET.register_namespace('content', CONTENT)
+
+
+class TextExtractor(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.parts = []
+        self.hidden = 0
+    def handle_starttag(self, tag, attrs):
+        if tag in ('script', 'style'):
+            self.hidden += 1
+        if tag in ('p', 'div', 'br', 'li', 'h1', 'h2', 'h3'):
+            self.parts.append('\n')
+    def handle_endtag(self, tag):
+        if tag in ('script', 'style'):
+            self.hidden = max(0, self.hidden - 1)
+        if tag in ('p', 'div', 'li'):
+            self.parts.append('\n')
+    def handle_data(self, data):
+        if not self.hidden:
+            self.parts.append(data)
+
+def plain_text(value):
+    parser = TextExtractor()
+    parser.feed(value)
+    return '\n'.join(line.strip() for line in ''.join(parser.parts).splitlines() if line.strip())
 
 
 def timestamp(value):
@@ -64,7 +90,7 @@ def parse_feed(data, source, now):
         output.append(dict(guid=guid, title=fields.get('title', 'Untitled'), link=link,
                            source=source['name'], source_url=source['url'],
                            published=published if published is not None else now,
-                           content=fields.get('encoded') or fields.get('content') or fields.get('description') or fields.get('summary', ''),
+                           content=plain_text(fields.get('encoded') or fields.get('content') or fields.get('description') or fields.get('summary', '')),
                            first_seen=now))
     return output
 
@@ -147,7 +173,7 @@ def render(state):
         ET.SubElement(item, 'guid', isPermaLink='false').text = article['guid']
         ET.SubElement(item, 'pubDate').text = email.utils.format_datetime(dt.datetime.fromtimestamp(article['published'], UTC), usegmt=True)
         ET.SubElement(item, 'source', url=article['source_url']).text = article['source']
-        ET.SubElement(item, 'description').text = article['content']
+        ET.SubElement(item, 'description').text = article['content'][:300]
         ET.SubElement(item, '{' + CONTENT + '}encoded').text = article['content']
     return ET.tostring(root, encoding='utf-8', xml_declaration=True)
 
