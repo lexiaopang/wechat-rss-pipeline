@@ -1,0 +1,30 @@
+name: Aggregate RSS
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: rss-persistent-state
+  cancel-in-progress: false
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest -v
+      - run: python aggregate.py
+      - name: Persist feed and deduplication state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state.json public/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update aggregated RSS and persistent state'
+            git push
+          fi

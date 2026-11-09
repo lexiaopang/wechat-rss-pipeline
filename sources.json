@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "name": "机器之心",
+    "url": "https://wechat2rss.xlab.app/feed/51e92aad2728acdd1fda7314be32b16639353001.xml"
+  },
+  {
+    "id": "2",
+    "name": "新智元",
+    "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml"
+  },
+  {
+    "id": "3",
+    "name": "量子位",
+    "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
+    "fallback_url": "https://www.qbitai.com/feed"
+  },
+  {
+    "id": "4",
+    "name": "PaperWeekly",
+    "url": "https://wechat2rss.xlab.app/feed/3be891c2f4e526629ab055a297cc2cd6c1f0a563.xml"
+  },
+  {
+    "id": "5",
+    "name": "夕小瑶科技说",
+    "url": "https://wechat2rss.xlab.app/feed/a1cd365aa14ed7d64cabfc8aa086da40ecaba34d.xml"
+  },
+  {
+    "id": "6",
+    "name": "我爱计算机视觉",
+    "url": "https://wechat2rss.xlab.app/feed/b81ffcfff1107b5265cd7e39de610dc7ca72caf4.xml"
+  },
+  {
+    "id": "7",
+    "name": "Datawhale",
+    "url": "https://wechat2rss.xlab.app/feed/4d620d988cb21cfeefd2263207221f0dc70df9ff.xml"
+  },
+  {
+    "id": "8",
+    "name": "极客公园",
+    "url": "https://wechat2rss.xlab.app/feed/1a5aec98e71c707c8ca092bc2c255b9d4bac477d.xml"
+  },
+  {
+    "id": "9",
+    "name": "差评",
+    "url": "https://wechat2rss.xlab.app/feed/8d839de8dd3290a1f1be7a94423cccb30c1b087d.xml"
+  },
+  {
+    "id": "10",
+    "name": "小米技术",
+    "url": "https://wechat2rss.xlab.app/feed/20bc9c3251b3c4f73d3b53aa1f1ab853d05d4cbc.xml"
+  },
+  {
+    "id": "11",
+    "name": "42章经",
+    "url": "https://wechat2rss.xlab.app/feed/31436fcc3bba8c2c2a9337a163afcb3b5a57a0a0.xml"
+  },
+  {
+    "id": "12",
+    "name": "阿里云开发者",
+    "url": "https://wechat2rss.xlab.app/feed/c74ed6db00cfbf16f2a048a165b4453f982681f0.xml"
+  },
+  {
+    "id": "13",
+    "name": "腾讯技术工程",
+    "url": "https://wechat2rss.xlab.app/feed/9685937b45fe9c7a526dbc32e4f24ba879a65b9a.xml"
+  },
+  {
+    "id": "14",
+    "name": "小众软件",
+    "url": "https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml",
+    "fallback_url": "https://feeds.appinn.com/appinns/"
+  },
+  {
+    "id": "15",
+    "name": "傅盛",
+    "url": "https://wechat2rss.xlab.app/feed/71257003d43d39b91ff9d38b6f3330c883dc8e0c.xml"
+  }
+]
