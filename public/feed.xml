@@ -51741,6 +51741,166 @@ One more thing
 如果再参考康威定律，感觉这个继续走下去，对未来的组织架构设计、项目制的真正落地，会有非常大的影响。
 而如果你有新想法，那新想法验证迭代速度，预期也会有一个质的变化。
 你们团队也出现过类似变化吗，或者有什么其他有意思的案例？
+跳转微信打开</content:encoded></item><item><title>群晖 NAS 再曝两个严重漏洞：最高 9.8 分，可远程读写文件，官方紧急修复中</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704710&amp;idx=2&amp;sn=e4ac9e201d81c2d8cda2ae6890f4b3eb</link><guid isPermaLink="false">urn:sha256:201b3de3a74e9f20a8d624d5119f35b1bd92b3f001c297e9be0a216ebb4f0967</guid><pubDate>Fri, 20 Nov 2026 09:48:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>原创 青小蛙 2026-11-20 17:48 四川
+群晖 NAS 用户注意，又有两个安全漏洞需要处理了。
+2026 年 11 月 19 日，群晖（Synology）连续发布两份安全公告 Synology-SA-26:21，涉及 DSM 与 BeeStation OS 的 OAuth API 和 NGINX HTTP/2。
+其中 OAuth API 漏洞的 CVSS 评分高达 9.8 分（满分 10 分），攻击者无需登录，就可能远程读取、修改 NAS 文件，或导致服务不可用。
+另一个则是 Nginx 爆出的严重漏洞，可能让 Web 服务崩溃，并在特定条件下远程执行代码。@Appinn
+截至 2</description><content:encoded>原创 青小蛙 2026-11-20 17:48 四川
+群晖 NAS 用户注意，又有两个安全漏洞需要处理了。
+2026 年 11 月 19 日，群晖（Synology）连续发布两份安全公告 Synology-SA-26:21，涉及 DSM 与 BeeStation OS 的 OAuth API 和 NGINX HTTP/2。
+其中 OAuth API 漏洞的 CVSS 评分高达 9.8 分（满分 10 分），攻击者无需登录，就可能远程读取、修改 NAS 文件，或导致服务不可用。
+另一个则是 Nginx 爆出的严重漏洞，可能让 Web 服务崩溃，并在特定条件下远程执行代码。@Appinn
+截至 2026 年 11 月 20 日17点41分，两份英文公告仍显示 Ongoing（处理中）。
+群晖列出了部分 DSM 分支的修复目标和计划日期，但这不等于补丁已经开放下载。
+1. CVE-2026-120382：可远程读写 NAS 文件
+• CVSS 3.1 评分：9.8 / 10
+• 影响组件：DSM OAuth API
+• 官方公告：Synology-SA-26:21
+OAuth 是一套授权机制，让应用在获得授权后访问其他服务。这次的问题出在群晖 OAuth API 对命令参数分隔符的处理上。
+根据官方公告，远程攻击者可能利用它读取或写入任意文件，也可能发起拒绝服务攻击，让服务无法正常使用。CVSS 向量标明无需已有权限、无需用户交互，也就是说，利用漏洞不要求攻击者先有 DSM 账户，或让你点击恶意链接。
+可能受影响：依赖该服务的第三方应用，可能无法完成授权、续期或访问 NAS。例如群晖官方列出的 Amazon Echo / Alexa 连接 Audio Station 播放音乐。
+可以关：
+青小蛙觉得，是时候精简套件了，没啥用的都关了
+2. CVE-2026-123007：NGINX2Root，特定条件下可远程执行代码
+• CVSS 3.1 评分：8.1 / 10
+• 影响组件：启用 HTTP/2 的 NGINX
+• 官方公告：Synology-SA-26:20
+这是 Nginx 的漏洞，但群晖也用到了。所以…等更新吧。
+具体可以看一下昨天的安全情报：
+• Nginx 爆出严重漏洞，HTTP/2 用户注意：可能被远程执行代码｜CVE-2026-123007 评分 8.1分
+两份公告的整体严重性均标为 Critical；NGINX2Root 的具体漏洞详情则标为 Important，评分为 8.1。
+哪些群晖版本受到影响？
+两份公告都列出了 DSM 7.4、7.3、7.2.2、7.2.1、7.1，以及 BeeStation OS 1.5。核对时的修复安排如下：
+产品版本
+修复目标 / 建议
+公告中的可用性状态
+DSM 7.4
+7.4.1-90080 Update 2 或更高
+计划于 11 月 20 日前发布
+DSM 7.3
+7.3.2-86009 Update 6 或更高
+计划于 11 月 20 日前发布
+DSM 7.2.2 / 7.2.1
+官方建议升级至 7.3.2-86009-6 或更高
+修复中；先确认机型支持
+DSM 7.1
+产品表尚未确认可用补丁
+修复中
+BeeStation OS 1.5
+尚未列出可用修复版本
+修复中
+特别注意：Nginx 的问题可能还会影响第三方套件，或者用户自己通过 Docker 安装的程序，这些需要自行检查。
+群晖给 DSM 7.4 和 7.3 列出的计划日期为 2026 年 11 月 20 日（今天），截止目前还未上线。
+具体可进入群晖后台控制面板中的更新页面刷新。
+但是，后台可能刷不出来，可以去官网选设备，然后看：
+• https://www.synology.cn/zh-cn/releaseNote/DSM
+补丁还没拿到，怎么办？
+群晖给出了两项临时缓解措施，分别对应两个漏洞。
+第一，停用 OAuth Service 套件。
+在 DSM「套件中心」找到 OAuth Service 并停用。这项措施对应 CVE-2026-120382；如果已有应用依赖它，操作前需要确认停用带来的影响。
+第二，关闭 HTTP/2。
+按照公告给出的路径，进入「控制面板 → 网络 → 连接（Connectivity）」，关闭 HTTP/2。
+另外，建议关闭公网访问，采用组网的方式，比如网云连、Tailscale、Zerotier 等第三方服务。当前两份公告没有单独确认 QuickConnect 本身存在漏洞。
+青小蛙觉得
+各位注意啊，不止是群晖，其他 NAS 一样会有漏洞。不要觉得群晖有问题我就换一个系统，就没事了。
+能爆出漏洞代表还有人管，有人在修…没爆出漏洞不代表没有漏洞…
+总之未来尽可能不要公网访问吧。
+还有就是异地备份比较重要。
+阅读原文
+跳转微信打开</content:encoded></item><item><title>Alfred 6 发布：在快速启动中运行自己的「小程序」</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704710&amp;idx=3&amp;sn=57525286ba02c0f99e300fdd082e4f05</link><guid isPermaLink="false">urn:sha256:4d7f1fb8a8c5597c6b7a487aa974ab6de82d197c4225a4dab8d09d416ab15a42</guid><pubDate>Fri, 20 Nov 2026 09:48:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>原创 青小蛙 2026-11-20 17:48 四川
+Mac 上的老牌效率工具 Alfred 6 正式发布了。
+Mac 上的老牌效率工具 Alfred 6 正式发布了。
+这次除了搜索历史、剪贴板和界面更新，Alfred 还新增了 Alfred UI Toolkit：工作流可以显示自己的操作窗口，在里面放输入框、按钮、表格和预览内容，也能调用 AI 模型，堪称在快速启动中运行自己写的小程序。
+Alfred UI：让工作流变成小程序
+过去，许多 Alfred 工作流通过关键词和搜索结果列表与用户交互。Alfred UI 扩展了这部分能力，开发者可以用 JSON 定义窗口里的控件和布局，显示文字、图</description><content:encoded>原创 青小蛙 2026-11-20 17:48 四川
+Mac 上的老牌效率工具 Alfred 6 正式发布了。
+Mac 上的老牌效率工具 Alfred 6 正式发布了。
+这次除了搜索历史、剪贴板和界面更新，Alfred 还新增了 Alfred UI Toolkit：工作流可以显示自己的操作窗口，在里面放输入框、按钮、表格和预览内容，也能调用 AI 模型，堪称在快速启动中运行自己写的小程序。
+Alfred UI：让工作流变成小程序
+过去，许多 Alfred 工作流通过关键词和搜索结果列表与用户交互。Alfred UI 扩展了这部分能力，开发者可以用 JSON 定义窗口里的控件和布局，显示文字、图片、Markdown、进度条，甚至网页。
+比如，安装后输入 tryaui，就能编辑 JSON，并实时预览生成的界面；停止输入后，预览自动更新。
+它允许开发者自定义工作流的操作界面和布局，按照官方的技术说明，这些界面会转换成 macOS 原生 AppKit 控件。
+青小蛙觉得，mememem 竞争激烈，快速启动工具也不得不拼一下 UI 了。
+这个 Launchpad 复刻了曾经的原生启动台，看起来还蛮有意思的：
+也就是说，你也能自己写出这样的「小程序」了。
+比如计时器：
+比如在桌面端测试移动网页效果：
+其他更新
+Alfred 6 还带来了不少日常功能改进：
+• 搜索历史：通过方向键 ↑ 找回之前输入的内容，或使用 ! 搜索历史记录。默认关闭，需要手动启用。
+• 联系人搜索加速：重写搜索机制，支持中文等 CJK 文字分词、模糊匹配，并显示联系人头像。
+• 剪贴板历史增强：支持更多富文本格式，最多可以同时显示 30 条历史记录。
+• 界面重新设计：支持浅色模式，加入 Liquid Glass 风格元素和全新主题。
+• 免费版功能增加：自定义备用搜索引擎现在也向免费用户开放。
+只有 6MB，依旧原生运行
+Alfred 6 仍然是一款完全原生的 macOS 应用，安装包约 6MB，最低支持 macOS 12。
+基础功能免费，Workflow 等高级功能需要购买 Powerpack。Alfred 6 单用户授权为 £40，终身升级授权为 £70，老用户可以购买升级授权。
+用户反馈：有人看好新工作流，也有人觉得变化不大
+青小蛙找了一下各种反馈，有好优化：
+• 看好 Alfred UI 的扩展空间。 Reddit 用户 Miloutinou 表示，尝试用 Claude 做了一些东西后，觉得速度和响应不错，并把 Alfred UI 看作本次更新最重要的变化。
+• 升级后的日常感受未必明显。 V2EX 的 guin（12 楼） 觉得除了几个新工作流，与 5 代区别不大；lonenol（13 楼） 认为自定义窗口像小程序，但试用官方 Launchpad 时感到有延迟。
+• 示例体验也有负面反馈。cloudyplain（16 楼） 反馈 Brain Outsourcing 卡顿。帖子没有提供足够的配置和复现信息，暂时不能据此判断问题出在工作流、模型服务还是网络。
+• 价格和使用习惯仍影响选择。chengYT（2 楼） 因剪贴板历史属于付费功能，选择继续用 Tinycast；mangoDB（33 楼） 表示自己已经习惯 Raycast。也有老用户如 YJMe（37 楼） 继续升级，看重的是 Alfred 的小巧和速度。
+这些年，随着 Raycast 和 Tinycast 等同类工具的出现，一些用户已经转向了其他产品。青小蛙由于此前买的是年更授权，升级不了之后尝试了 Raycast，就正式切过去了，目前已经没有在使用 Alfred 😂。
+至于 Alfred 6 能不能靠小程序把老用户吸引回来，还得看用户想象力啊，如果小程序足够给力…
+阅读原文
+跳转微信打开</content:encoded></item><item><title>在苹果手机中装安卓系统｜ 已被苹果下架，但开源了！</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704710&amp;idx=1&amp;sn=e2a7f2e84742abce49fc1bf1af9c1a30</link><guid isPermaLink="false">urn:sha256:da4f4cb725246a2b1dc3c57da85de5dc7e6d701e88dcda7a825dc20213990e6e</guid><pubDate>Fri, 20 Nov 2026 09:48:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>原创 青小蛙 2026-11-20 17:48 四川
+终于，在苹果中安装安卓，已经照进现实了。笑死我了这个叫 Andarium 的 iPhone 应用，可以在 iPhone 中跑一个安卓虚拟机，实现奇葩的苹果装安卓效果。
+终于，在苹果中安装安卓，已经照进现实了。笑死我了
+这个叫 Andarium 的 iPhone 应用，可以在 iPhone 中跑一个安卓虚拟机，实现奇葩的苹果装安卓效果。
+就很离谱。
+不过苹果已经下架该应用。有幸，我手机里还有这个 app。
+因为是虚拟机，整体体验有点卡，触摸感受也不是很顺畅，但是能用。
+我甚至安装了 Firefox 打开论坛（自带没有浏览器）：
+系统设置显示这</description><content:encoded>原创 青小蛙 2026-11-20 17:48 四川
+终于，在苹果中安装安卓，已经照进现实了。笑死我了这个叫 Andarium 的 iPhone 应用，可以在 iPhone 中跑一个安卓虚拟机，实现奇葩的苹果装安卓效果。
+终于，在苹果中安装安卓，已经照进现实了。笑死我了
+这个叫 Andarium 的 iPhone 应用，可以在 iPhone 中跑一个安卓虚拟机，实现奇葩的苹果装安卓效果。
+就很离谱。
+不过苹果已经下架该应用。有幸，我手机里还有这个 app。
+因为是虚拟机，整体体验有点卡，触摸感受也不是很顺畅，但是能用。
+我甚至安装了 Firefox 打开论坛（自带没有浏览器）：
+系统设置显示这是 Android 17，来自 LineageOS 24 版本。
+也不是不能用，不装微信了，怕封号。
+你们还想看啥，留言给我。
+后续：今天的消息是，Andarium 已经被苹果下架，开发者也是会起标题的，吐槽：我的 App 火了，然后苹果威胁要关闭我的开发者账号
+/t/1258411
+而下架理由是这样的：
+经过重新评估，我们发现该应用不符合应用审核指南。 具体来说，我们发现该应用程序违反了以下规定：
+准则2.5.2和1.1-性能-软件要求。
+我们注意到，该应用包含的功能并不专注于受支持的苹果平台的体验。具体来说，您的应用程序允许用户在iOS平台上复制Android操作系统。
+是的，明确了不允许用户在 iOS 上使用 Android。😂
+于是...开发者决定开源了
+是的，虽然不能直接从应用商店安装，但如果你愿意折腾，还是可以通过侧载的方式，安装这个「在苹果中安装安卓系统」的苹果应用。
+哎呀，太好玩了。
+阅读原文
+跳转微信打开</content:encoded></item><item><title>本周赛博领鸡蛋（11.20~11.26）：《深渊之印》《Lonesome Village》</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704710&amp;idx=4&amp;sn=f97cec8145edc6ee2d9b24f9974f8b45</link><guid isPermaLink="false">urn:sha256:ed1991f1eaf419f5fc7291b56ec5e9ce094c50b4d2143fbbeac9c75a687a8e0d</guid><pubDate>Fri, 20 Nov 2026 09:48:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>原创 青小蛙 2026-11-20 17:48 四川
+本周赛博领鸡蛋 Epic 送出 2 款游戏：电脑端可领《深渊之印 / Mark of the Deep》；手机端可领《Lonesome Village》。
+《深渊之印 / Mark of the Deep》
+一款海盗题材的单人动作冒险游戏，融合类银河战士恶魔城的探索与类魂战斗设计。玩家扮演海盗新人，在受诅咒的岛屿上寻找失散船员，与怪物、不死生物和邪教徒交战，通过解锁能力、获取武器与饰品强化角色并探索新区域；途中还可帮助其他角色、完成任务，作出影响结局的选择。
+喜欢海盗题材，又想兼顾探索和挑战性战斗的话，可以看看这款。
+Steam 评价：
+•</description><content:encoded>原创 青小蛙 2026-11-20 17:48 四川
+本周赛博领鸡蛋 Epic 送出 2 款游戏：电脑端可领《深渊之印 / Mark of the Deep》；手机端可领《Lonesome Village》。
+《深渊之印 / Mark of the Deep》
+一款海盗题材的单人动作冒险游戏，融合类银河战士恶魔城的探索与类魂战斗设计。玩家扮演海盗新人，在受诅咒的岛屿上寻找失散船员，与怪物、不死生物和邪教徒交战，通过解锁能力、获取武器与饰品强化角色并探索新区域；途中还可帮助其他角色、完成任务，作出影响结局的选择。
+喜欢海盗题材，又想兼顾探索和挑战性战斗的话，可以看看这款。
+Steam 评价：
+• 总体评价：多半好评（243 篇，71% 好评）
+• 发行日期：2025 年 1 月 24 日（电脑版）
+• 是否支持中文：是
+• https://store.epicgames.com/zh-CN/p/mark-of-the-deep-f7dc08
+《Lonesome Village》
+一款结合解谜与生活模拟的无战斗冒险游戏。玩家扮演郊狼 Wes，探索神秘高塔，通过逐层解谜救出失踪村民，并调查村庄与主角的过去。回到村庄后，可以与居民建立关系、建造和装饰房屋，也能进行园艺和钓鱼，帮助村庄恢复生机。
+不想打打杀杀，想解谜兼过点村庄小日子，可以留意它。
+Steam 评价：
+• 总体评价：多半好评（160 篇，72% 好评）
+• 发行日期：未知（Android 版）；未知（iOS 版）
+限免地址：
+• Android https://store.epicgames.com/zh-CN/p/lonesome-village-android-15d165
+• iOS https://store.epicgames.com/zh-CN/p/lonesome-village-ios-2a807f
+阅读原文
 跳转微信打开</content:encoded></item><item><title>第二期玄武FDE企业AI落地实践营来了！</title><link>https://mp.weixin.qq.com/s?__biz=MzIyNjM2MzQyNg==&amp;mid=2247730363&amp;idx=1&amp;sn=79447a40ed0a06e46975f6aa87bd5043</link><guid isPermaLink="false">urn:sha256:59e36f72694eb5cc2e014c381b231ba5a21d03ea8c7dadc7b82b8201410584f3</guid><pubDate>Fri, 20 Nov 2026 11:26:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/4d620d988cb21cfeefd2263207221f0dc70df9ff.xml">Datawhale</source><description>Datawhale 2026-11-20 19:26 浙江
 明天下午，第二期玄武FDE 企业 AI 落地实践营来了！
 这一次，我们从企业真实业务出发，聊聊如何从大模型走向业务智能体、怎样设计智能体工作流。
