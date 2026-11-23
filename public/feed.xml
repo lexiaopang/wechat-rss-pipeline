@@ -55048,6 +55048,15 @@ F2G-Pose 为这一问题提供了一种兼顾精度、效率与实际部署需�
 © THE END
 转载请联系本公众号获得授权
 投稿或寻求报道：liyazhou@jiqizhixin.com
+跳转微信打开</content:encoded></item><item><title>操作系统盯上你的聊天记录？Signal开始反击</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704765&amp;idx=1&amp;sn=1f6342da6a553f64c27477c33df37bd0</link><guid isPermaLink="false">urn:sha256:c7ed9edf47354cd1e1f22d7d9ba05aa5164f978678eee3b70fed456727e8d8b6</guid><pubDate>Sun, 22 Nov 2026 08:51:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>青小蛙 2026-11-22 16:51 四川
+随着 AI 深入操作系统，手机和电脑开始具备读取屏幕、分析内容的能力。这也带来了新的隐私问题：即使聊天软件采用端到端加密，显示在屏幕上的聊天记录仍可能被系统 AI 获取。
+对此，隐私聊天软件 Signal 发布公告，介绍了针对系统 AI 的保护措施：
+在 iOS 上限制截图和 Siri 读取，在 Android 上加强屏幕安全保护，在 Windows 上防止 Recall 截图；对于 macOS，则建议用户手动将 Signal 排除在 Siri 的访问范围之外。
+来源：signal.org/blog/protecting-your-privacy</description><content:encoded>青小蛙 2026-11-22 16:51 四川
+随着 AI 深入操作系统，手机和电脑开始具备读取屏幕、分析内容的能力。这也带来了新的隐私问题：即使聊天软件采用端到端加密，显示在屏幕上的聊天记录仍可能被系统 AI 获取。
+对此，隐私聊天软件 Signal 发布公告，介绍了针对系统 AI 的保护措施：
+在 iOS 上限制截图和 Siri 读取，在 Android 上加强屏幕安全保护，在 Windows 上防止 Recall 截图；对于 macOS，则建议用户手动将 Signal 排除在 Siri 的访问范围之外。
+来源：signal.org/blog/protecting-your-privacy/
 跳转微信打开</content:encoded></item><item><title>80位学者梳理多模态智能体记忆：297种架构，仅17种自进化</title><link>https://mp.weixin.qq.com/s?__biz=MzIwMTc4ODE0Mw==&amp;mid=2247724047&amp;idx=2&amp;sn=b170203a2abf5ebe577357cdf97f1a6d</link><guid isPermaLink="false">urn:sha256:915b84b2bb9be9df096645ee06261e45756c53f263bd9d6fff824a672b22efb9</guid><pubDate>Sun, 22 Nov 2026 12:05:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3be891c2f4e526629ab055a297cc2cd6c1f0a563.xml">PaperWeekly</source><description>Qingyue Jiao 2026-11-22 20:05 北京
 会记忆，不一定会进化
 从纠正一条错误记录，到主动改进后续检索规则，Agent 记忆正迈向更高层级。
@@ -55190,6 +55199,135 @@ UIUC, CMU, Rutgers, Princeton, Stanford, Yale
 欢迎来到 Self-Rewriting 的时代。
 更多阅读
 ·
+跳转微信打开</content:encoded></item><item><title>《王国之泪》PC 原生版支持插帧、自由视角、快速存档</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704785&amp;idx=2&amp;sn=53c1ee64d21a37abffac65808309816f</link><guid isPermaLink="false">urn:sha256:2a5c83947cf171ab68553ae8efc76749417c6b5e1d43744b4e51b10f79e27eb5</guid><pubDate>Sun, 22 Nov 2026 12:06:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>原创 青小蛙 2026-11-22 20:06 四川
+《塞尔达传说：王国之泪》PC（Windows/Linux）原生移植项目 TotK Recomp 发布了 v0
+《塞尔达传说：王国之泪》PC（Windows/Linux）原生移植项目 TotK Recomp 发布了 v0.5.0 版本。
+这次更新带来了 AMD FSR 3.1、帧生成、自由视角、快速存档等新功能，还有不少性能优化。
+新增 AMD FSR 3.1，支持游戏插帧
+新版本内置了 AMD FSR 3.1 超分辨率与 FSR 3 帧生成技术，支持 NVIDIA、AMD、Intel 显卡，无需安装额外插件。
+其中，帧生成（插帧）可以在两帧</description><content:encoded>原创 青小蛙 2026-11-22 20:06 四川
+《塞尔达传说：王国之泪》PC（Windows/Linux）原生移植项目 TotK Recomp 发布了 v0
+《塞尔达传说：王国之泪》PC（Windows/Linux）原生移植项目 TotK Recomp 发布了 v0.5.0 版本。
+这次更新带来了 AMD FSR 3.1、帧生成、自由视角、快速存档等新功能，还有不少性能优化。
+新增 AMD FSR 3.1，支持游戏插帧
+新版本内置了 AMD FSR 3.1 超分辨率与 FSR 3 帧生成技术，支持 NVIDIA、AMD、Intel 显卡，无需安装额外插件。
+其中，帧生成（插帧）可以在两帧真实画面之间自动生成一帧，让游戏显示帧率接近翻倍。例如原本渲染 60 FPS，开启后可以输出接近 120 FPS 的画面。
+此外，FSR 3.1 超分辨率还可以提升 GPU 性能受限场景下的帧率，改善草地、电线等细节的闪烁问题。
+两项功能均默认关闭，需要在游戏设置中手动开启。开发者建议实际渲染帧率达到 60 FPS 后再使用插帧，以免增加输入延迟和画面瑕疵。
+F1 进入设置页面
+新增自由视角、快速存档
+这次还加入了几个实用功能：
+• 自由视角：镜头可以离开林克，自由探索、拍摄海拉鲁风景。
+• 快速存档：按 F6 存档、F7 读档，不影响手动存档。
+• PlayStation 按键提示：支持显示 ×、○、△、□ 等 PS 手柄按键。
+• Mod 支持增强：兼容更多代码插件，并能查看 Mod 之间的冲突。
+其中自由视角和快速存档需要游戏版本 1.4.3。
+性能继续提升
+开发者也加入了多项性能优化：
+• Windows PGO 编译优化，测试中 FPS 提升约 6%～12%。
+• sync_ahead 优化，在 GTX 1050 Ti 上提升约 6%～10%。
+• barrier_merge 优化，在 RX 7900 XT 的瀑布场景中，FPS 从 82 提升至 141。
+另外还修复了 AMD 显卡运行一段时间后掉帧、水面闪烁、阴影异常，以及高帧率下部分神庙机关无法正常工作等问题。
+如何升级？
+已经安装旧版本的玩家，直接运行新版安装程序，选择原来的游戏目录即可（默认情况下不需要选择，会自带）
+游戏文件、存档和配置都会保留，安装程序会重新生成可执行文件与着色器缓存。
+获取
+• GitHub https://github.com/valentderah/totk-pc-recomp
+• 搬运 https://d.appinn.com/totk-recomp/
+阅读原文
+跳转微信打开</content:encoded></item><item><title>万物皆可模拟，还有什么是德国人做不出来的？</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704785&amp;idx=1&amp;sn=092f012f69b6d54a5e2cce739d7d8b3c</link><guid isPermaLink="false">urn:sha256:6c5366d18ce56c2766deeceec7373eaa9fc29fbfe1157970f79d09046d7cf2a3</guid><pubDate>Sun, 22 Nov 2026 12:06:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>原创 青小蛙 2026-11-22 20:06 四川
+Stullensimulator 是一个德国开发者制作的免费网页小游戏，专门模拟一件事：往一片面包上涂酱、放
+Stullensimulator 是一个德国开发者制作的免费网页小游戏，专门模拟一件事：往一片面包上涂酱、放食材，制作开放式三明治。@Appinn
+开发者还说：涂一片面包。仅此而已。
+听起来非常无聊，但它还有相当认真的物理模拟。
+有哪些有趣的地方？
+• 20 多种食材：香肠、奶酪、酸黄瓜、猕猴桃、薯条，甚至软糖。
+• **5 种酱：**黄油、果酱、坚果巧克力酱、夸克鲜奶酪、肝肠酱
+• 真实重力：萝卜片放在煎蛋上可能滑下来，黄瓜伸出面</description><content:encoded>原创 青小蛙 2026-11-22 20:06 四川
+Stullensimulator 是一个德国开发者制作的免费网页小游戏，专门模拟一件事：往一片面包上涂酱、放
+Stullensimulator 是一个德国开发者制作的免费网页小游戏，专门模拟一件事：往一片面包上涂酱、放食材，制作开放式三明治。@Appinn
+开发者还说：涂一片面包。仅此而已。
+听起来非常无聊，但它还有相当认真的物理模拟。
+有哪些有趣的地方？
+• 20 多种食材：香肠、奶酪、酸黄瓜、猕猴桃、薯条，甚至软糖。
+• **5 种酱：**黄油、果酱、坚果巧克力酱、夸克鲜奶酪、肝肠酱
+• 真实重力：萝卜片放在煎蛋上可能滑下来，黄瓜伸出面包边缘太多会翻落。
+• 软体物理：三文鱼、火腿、奶酪会随着下方食材的形状弯曲、下垂。
+• 自由堆叠：可以拖动、旋转食材，想放多少就放多少。
+• 拍照分享：提供四个拍摄角度，保存作品后获得专属编号和链接。
+• 随机生成：一键生成一份意想不到的三明治。
+操作指南
+1. 蘸取酱料：点击酱料罐，刀具就会蘸上酱料。如果刀上的酱料用完了，再点一次即可。
+2. 涂抹酱料：按住鼠标左键，在面包上移动，就能涂抹酱料。
+3. 添加食材：从下方食材栏中，将食材拖到面包上。
+4. 旋转食材：点击食材，再拖动控制手柄旋转。也可以使用鼠标滚轮旋转。
+5. 注意重力：如果食材开始摇晃，松开鼠标后，它就可能滑落。
+6. 删除食材：将食材拖出面包范围，即可移除。
+7. 拍照分享：点击红色按钮拍照，再点击「Behalten」（保留），作品就会获得一个编号和专属分享链接。
+别人做的三明治
+最后，你做好的三明治，还能被收录，让别人也看看。
+反正，就挺没用的。
+获取
+• 官网 https://stulle.app/alle
+阅读原文
+跳转微信打开</content:encoded></item><item><title>跑本地大模型，内存还是得够大啊</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704785&amp;idx=3&amp;sn=a8dc30b51f382646156ca97321a47c0f</link><guid isPermaLink="false">urn:sha256:ae3cbb53afa0b8743a9b67031b00bf68f711bab1bcf645907c560ec8efbbc510</guid><pubDate>Sun, 22 Nov 2026 12:06:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>原创 青小蛙 2026-11-22 20:06 四川
+本地大模型运行工具 Strata 更新到了 0.2.18，新增了对腾讯混元 Hy4-Flash 的原生支持。
+本地大模型运行工具 Strata 更新到了 0.2.18，新增了对腾讯混元 Hy4-Flash 的原生支持。不过，入门内存已经增加至 64GB。@Appinn
+Strata 是一个可以让普通家用电脑也能比较快速的运行开源大模型的工具，主要支持 Qwen3.8-Fl1sh-Next、Qwen3.6-35B-A3B，也支持 1 比特 DeepSeek。
+Hy4-Flash 是一款总参数 224B、每个 Token 激活约 12B 参数的</description><content:encoded>原创 青小蛙 2026-11-22 20:06 四川
+本地大模型运行工具 Strata 更新到了 0.2.18，新增了对腾讯混元 Hy4-Flash 的原生支持。
+本地大模型运行工具 Strata 更新到了 0.2.18，新增了对腾讯混元 Hy4-Flash 的原生支持。不过，入门内存已经增加至 64GB。@Appinn
+Strata 是一个可以让普通家用电脑也能比较快速的运行开源大模型的工具，主要支持 Qwen3.8-Fl1sh-Next、Qwen3.6-35B-A3B，也支持 1 比特 DeepSeek。
+Hy4-Flash 是一款总参数 224B、每个 Token 激活约 12B 参数的 MoE 大模型。支持图像理解和最高 100 万 Token 的上下文。
+Strata 为它准备了专用推理引擎、三档量化和内置推测解码。
+那么问题来了：
+1. Hy4-Flash 比 Qwen3.8-Flash-Next 强吗？
+2. 如果你的电脑已经能跑 Qwen3.8-Flash-Next，还能换成 Hy4-Flash 吗？
+Strata 0.2.18 更新了什么？
+Strata 0.2.18 于北京时间 11 月 22 日发布，桌面版与命令行版本均升级到 0.2.18，推理引擎和负责安装更新的 Control 升级到 0.1.64。
+主要更新：
+• 原生支持 Hy4-Flash。新增独立的 strata-hy4 推理引擎，选择 Hy4-Flash 量化包时会按需下载。
+• 三档量化。SQ-64、SQ-96、SQ-128 分别面向不同的内存配置。
+• 内置 DFly2 推测解码，用于加快生成。桌面版与 strata launch 都支持。
+• 图像理解。可加载单独的 Vision 组件，文件大小为 0.93 GB。
+• 跨平台运行。支持 Windows、Linux、搭载 Apple 芯片的 Mac 以及 DGX Spark。可用的显卡后端因系统而异。
+升级后，原有的 Qwen、DeepSeek 模型以及聊天记录和设置都会保留。
+另外，现在的 API 可以使用原始模型名称了：
+Hy4-Flash 与 Qwen3.8-Flash-Next 有什么区别？
+两款模型都采用 MoE（混合专家）架构。模型拥有大量参数，每次生成一个 Token 时只调用其中一部分参与计算。Hy4-Flash 的总参数含约 64B Engram 查找参数，每个 Token 激活约 12B 参数。
+Hy4-Flash 支持百万级上下文，腾讯将它用于 Agent、文档处理和电脑操作。Qwen3.8-Flash-Next 在 Strata 里已有多种适合消费级硬件的低比特量化方案。
+谁的实际能力更强？
+以下对比数据来自腾讯 Hy4-Flash 官方模型卡附录的评测结果，分数越高越好。腾讯对每款模型采用各自可用的最高推理档位。
+Agent 与电脑操作
+在选取的三项 Agent 测试里，Hy4-Flash 得分都更高。以衡量图形界面操作的 OSWorld 2.1 为例，完整测试集的部分得分（partial score）是 68.1 对 58.8，相差 9.3 分。
+编程与终端
+这三项测试里，Qwen3.8-Flash-Next 得分更高。两者在 DeepSWE v1.1 上只差 0.5 分，差距最大的是使用 Claude Code 测试框架的 Terminal-Bench 4.0，Qwen 得分 29.5，Hy4-Flash 为 19.2。
+门槛以升，本地运行需要多少内存？
+Strata 为 Hy4-Flash 提供三档量化。以下是官方更新日志列出的磁盘占用和目标内存配置。
+量化
+磁盘占用
+官方内存配置
+SQ-64
+129.61 GB
+64 GiB 起
+SQ-96
+157.16 GB
+面向 96 GiB 系统
+SQ-128
+181.23 GB
+128 GiB 起
+官方列出的 SQ-64 起步配置是 64 GiB 系统内存，搭配 8、12 或 16 GiB 显存。即便手里有一张 24GB 显存的 RTX 3090，48GB 系统内存也低于这一档的官方起步要求。
+也就是说，运行 Hy4-Flash 至少需要 64GB 内存才可以，青小蛙表示已经无力测试了。
+已经在用 Strata，需要升级吗？
+内存足够的情况下，当然升级啊 😂
+下图是青小蛙最近一段时间以来，使用 RTX3090 + 48GB 内存，运行 Qwen-Flash-Next IQ3_S 的测速情况，基于 llm-bench：
+仅代表此电脑，建议都可以测试一下，我的 llm-bench 命令行：
+C:\llm-benchmark.exe benchmark --endpoint http://127.0.0.1:47831 --tool Strata --tool-key KEYKEY
+对于小于 64GB 内存的配置，现阶段继续用 Qwen 更实际。如果已经有 96 GiB 或 128 GiB 内存，可以按自己的任务试试 Hy4-Flash。
+获取
+• https://www.appinn.com/strata-0-2-18/
+• 搬运 https://d.appinn.com/strata/（已更新 0.2.18/0.1.64）
+阅读原文
 跳转微信打开</content:encoded></item><item><title>造物 100 #14｜给狗买个机器人保姆、在手机背后偷偷养宠物、键盘鼠标合二为一</title><link>https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&amp;mid=2653116957&amp;idx=1&amp;sn=3e1f22fdfd08a37e67878bde367c14d9</link><guid isPermaLink="false">urn:sha256:7a4c3f37c766a50e123fc371249d19e1117cb9c8188e0b0db0082aaa3d2c4445</guid><pubDate>Sun, 22 Nov 2026 12:34:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/1a5aec98e71c707c8ca092bc2c255b9d4bac477d.xml">极客公园</source><description>极客公园 2026-11-22 20:34 江苏
 众筹很热闹，但硬件需求还没被验证。
 硬件创新，好像走到了一个瓶颈期。
@@ -55310,6 +55448,20 @@ B 端就不一样。公司里的事情可能有大量重复，信息在沟通时
 那我最大的心得，就是要跟聪明、善良、能坚持、勇敢的人一起创业，shoot for the moon。最后我们不一定能落到哪颗星星上，但大家共同成长的速度会很吓人，大多数人最终都会超越原来的自己，在不同领域发光发热。
 42章经
 思考事物本质
+跳转微信打开</content:encoded></item><item><title>《GTA 6》已出现早期 PC 移植项目</title><link>https://mp.weixin.qq.com/s?__biz=MjM5NDMwMTI2MA==&amp;mid=2651704798&amp;idx=1&amp;sn=5f16658f5caaece77eab3f8f2420e6c6</link><guid isPermaLink="false">urn:sha256:51866b32051d928a520887fd8d4e5499cb38d703c348474b9837f0322e84b9be</guid><pubDate>Sun, 22 Nov 2026 13:33:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/3261d5a75cfef238650a2cabd4bbf99669c2f334.xml">小众软件</source><description>青小蛙 2026-11-22 21:33 四川
+《GTA 6》还没登陆 PC，做过《时之笛》PC 移植的 NotRexed，已经开始研究怎么把 Xbox Series 版搬到 Windows 了。
+新项目叫 Leonida，代码已经开源。
+github.com/ItsNotRexed/Leonida
+思路和他此前做的 Hookshot 类似，用「静态重编译」让主机游戏在电脑上原生运行。
+按项目 README 的说法，目前已经转换了 26,503 个着色器，并通过了静态验证。游戏本体还启动不了，也没有可玩的版本。
+说起来，可以算画了个饼，但真有进展。
+跳转微信打开</description><content:encoded>青小蛙 2026-11-22 21:33 四川
+《GTA 6》还没登陆 PC，做过《时之笛》PC 移植的 NotRexed，已经开始研究怎么把 Xbox Series 版搬到 Windows 了。
+新项目叫 Leonida，代码已经开源。
+github.com/ItsNotRexed/Leonida
+思路和他此前做的 Hookshot 类似，用「静态重编译」让主机游戏在电脑上原生运行。
+按项目 README 的说法，目前已经转换了 26,503 个着色器，并通过了静态验证。游戏本体还启动不了，也没有可玩的版本。
+说起来，可以算画了个饼，但真有进展。
 跳转微信打开</content:encoded></item><item><title>聊一聊：近两年你最后悔的事。。。</title><link>https://mp.weixin.qq.com/s?__biz=MzA5NDc1NzQ4MA==&amp;mid=2654710187&amp;idx=4&amp;sn=0d4700af9f9345309a4829dc3f42dfcb</link><guid isPermaLink="false">urn:sha256:19d306010c6964f75914332ac771c517822bcbc3c5720d9a706ebf92d9277627</guid><pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/8d839de8dd3290a1f1be7a94423cccb30c1b087d.xml">差评</source><description>聊一聊 2026-11-23 00:00 浙江
 跳转微信打开</description><content:encoded>聊一聊 2026-11-23 00:00 浙江
 跳转微信打开</content:encoded></item><item><title>今日最佳：这套装挺传奇的</title><link>https://mp.weixin.qq.com/s?__biz=MzA5NDc1NzQ4MA==&amp;mid=2654710187&amp;idx=3&amp;sn=01dd6a71e6cb681e9828cdf18fd6e345</link><guid isPermaLink="false">urn:sha256:4be3f5c43ea6816e56a86a53bde8e3ca10957f53b65270458d0c656a94fe57d4</guid><pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate><source url="https://wechat2rss.xlab.app/feed/8d839de8dd3290a1f1be7a94423cccb30c1b087d.xml">差评</source><description>今日最佳 2026-11-23 00:00 浙江
